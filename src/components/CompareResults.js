@@ -36,7 +36,6 @@ const CompareResults = ({ differences }) => {
                         {diff.kind === 'E' && `Changed ${diff.path.join('.')} from ${diff.lhs} to ${diff.rhs}`}
                         {diff.kind === 'N' && `Added ${diff.path.join('.')} with value ${diff.rhs}`}
                         {diff.kind === 'D' && `Deleted ${diff.path.join('.')}`}
-                        {diff.kind === 'A' && `Array ${diff.path.join('.')} index ${diff.index} ${diff.item.kind === 'N' ? `added ${diff.item.rhs}` : `deleted`}`}
                         {diff.kind === 'R' && `Field name changed from ${diff.path[0]} to ${diff.path[1]} with value ${diff.lhs}`}
                     </li>
                 ))}
